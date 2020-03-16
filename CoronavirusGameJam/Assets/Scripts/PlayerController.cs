@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         interactCollider = GetComponent<SphereCollider>();
-        interactCollider.enabled = false;
     }
 
     private void Update()
@@ -30,9 +29,14 @@ public class PlayerController : MonoBehaviour
 
     void Interact()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        interactCollider.enabled = false;
+    }
+
+    private void OnTriggerStay(Collider col)
+    {
+        if (col.CompareTag("Stair") && Input.GetKeyDown(KeyCode.E))
         {
-            interactCollider.enabled = true;
+            Interact();
         }
     }
 }

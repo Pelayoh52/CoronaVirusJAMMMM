@@ -1,8 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class InteractableObjects 
+public abstract class InteractableObjects : MonoBehaviour
 {
-   
+    protected enum ObjType { SHOWER, KITCHEN, BOTTLES, RADIO};
+
+    public abstract void DoMiniGame();
 }
