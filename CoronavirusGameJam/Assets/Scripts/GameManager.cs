@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,5 +18,13 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    static void PreloadManagers()
+    {
+       SceneManager.LoadScene("Managers", UnityEngine.SceneManagement.LoadSceneMode.Additive);
     }
 }

@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private SphereCollider interactCollider;
 
-
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
