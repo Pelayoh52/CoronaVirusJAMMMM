@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager Instance { get; private set; }
+
     public Image hungryBar;
     public Image thirstBar;
     public Image madnessBar;
@@ -12,16 +14,21 @@ public class UIManager : MonoBehaviour
 
     public Text dayIndicatorText;
 
+    
 
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
-        
+
     }
 
-    
+
     void Update()
     {
-        
+
     }
 }

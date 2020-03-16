@@ -6,7 +6,11 @@ public class Shower : InteractableObjects
 {
     public override void DoMiniGame()
     {
-        StartCoroutine(ShowerMiniGame());
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            StartCoroutine(ShowerMiniGame());
+        }
+        
     }
 
     IEnumerator ShowerMiniGame()

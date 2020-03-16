@@ -29,8 +29,12 @@ public class PlayerController : MonoBehaviour
 
     void Interact()
     {
-        interactCollider.enabled = false;
-        
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            interactCollider.enabled = false;
+        }
+
     }
 
     private void OnTriggerStay(Collider col)
