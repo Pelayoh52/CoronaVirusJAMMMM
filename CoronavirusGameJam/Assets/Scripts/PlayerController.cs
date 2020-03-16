@@ -30,11 +30,17 @@ public class PlayerController : MonoBehaviour
     void Interact()
     {
         interactCollider.enabled = false;
+        
     }
 
     private void OnTriggerStay(Collider col)
     {
         if (col.CompareTag("Stair") && Input.GetKeyDown(KeyCode.E))
+        {
+            Interact();
+        }
+
+        if (col.CompareTag("Bottles") && Input.GetKeyDown(KeyCode.E))
         {
             Interact();
         }
