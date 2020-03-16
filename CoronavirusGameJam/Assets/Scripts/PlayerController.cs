@@ -29,12 +29,7 @@ public class PlayerController : MonoBehaviour
 
     void Interact()
     {
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            interactCollider.enabled = false;
-        }
-
+      interactCollider.enabled = false;
     }
 
     private void OnTriggerStay(Collider col)
@@ -43,10 +38,12 @@ public class PlayerController : MonoBehaviour
         {
             Interact();
         }
+        
 
         if (col.CompareTag("Bottles") && Input.GetKeyDown(KeyCode.E))
         {
             Interact();
         }
+        
     }
 }

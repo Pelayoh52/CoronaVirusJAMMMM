@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class Bottles : InteractableObjects
 {
-    public Sprite2D spriteLetterInteractable;
+    //public Sprite2D spriteLetterInteractable;
 
     public void Start()
     {
-        spriteLetterInteractable.enabled = false;
+        
     }
     
     public override void DoMiniGame()
