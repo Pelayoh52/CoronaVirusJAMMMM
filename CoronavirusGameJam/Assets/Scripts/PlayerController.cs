@@ -46,4 +46,11 @@ public class PlayerController : MonoBehaviour
         }
         
     }
+    private void OnTriggerExit(Collider col)
+    {
+        if (col.CompareTag("Stair"))
+        {
+            Interact();
+        }
+    }
 }
